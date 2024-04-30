@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="converter-container">
+        <div class="container-flex-box">
+            <div class="flexbox-list">
+                <h3>Tools for conversion</h3>
+                <ul id="conversionType">
+                    <li><button onclick="selectOption('default')" class="list-button focused"><div><img class="star" src="./media/Star.svg" alt=""><p>Defult</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('morse')" class="list-button" ><div><img class="star" src="./media/Star.svg" alt=""><p>Morse Code Translator</p> </div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('nato')" class="list-button"><div><img class="star" src="./media/Star.svg" alt=""><p>NATO Alphabet Generator</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('transliterate')" class="list-button"><div><img class="star" src="./media/Star.svg" alt=""><p>Transliterate UA to ENG</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('transpolish')" class="list-button"><div><img class="star" src="./media/Star.svg" alt=""><p>Transliterate PL to UA</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('transiso')" class="list-button"><div><img class="star" src="./media/Star.svg" alt=""><p>Transliterate ISO</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                    <li><button onclick="selectOption('clearhtml')" class="list-button"><div><img class="star" src="./media/Star.svg" alt=""><p>Clear HTML</p></div><img class="arrow" src="./media/Arrow - Right.svg" alt=""></button></li>
+                </ul>
+            </div>
+            <div class="flexbox-textarea">
+                <div class="flexbox-textarea-header"><span class="dot"></span><h3>INPUT TEXT</h3></div>
+                <textarea class="flexbox-textarea-input" placeholder="Type or paste your content here" name="" id="inputText" cols="30" rows="10" ></textarea>
+                <button onclick="clearTextarea()" class="clear-button"><img src="./media/Trash - 2.svg" alt=""></button>
+            </div>
+        </div>
+        <div class="container-flex-box">
+            <div class="counter-list">
+                <h3>Tools for conversion</h3>
+                <p>Additional details about converted text.</p>
+                <ul>
+                    <li class="counter"><p>NAME</p><p>VALUE</p></li>
+                    <li class="counter"><p>Word Count:</p><span id="wordCount">0</span></li>
+                    <li class="counter"><p>Line Count:</p><span id="lineCount">0</span></li>
+                    <li class="counter"><p>Characters with spaces:</p><span id="letterCount">0</span></li>
+                    <li class="counter"><p>Characters without spaces:</p><span id="letterCountWithoutSpaces">0</span></li>
+                    <li class="counter"><p>Numbers and special symbols:</p><span id="digitAndSymbolCount">0</span></li>
+                    <li class="counter"><p>No numbers or special symbols:</p><span id="letterCountWithoutSpecial">0</span></li>
+                </ul>
+            </div>
+            <div class="flexbox-textarea">
+                <div class="flexbox-textarea-header"><span class="dot"></span><h3>OUTPUT TEXT</h3></div>
+                <div class="register-list">
+                    <ul>
+                        <li><button onclick="ToUpperCase()" class="register-button"><p class="register-button-t">T</p><p>Upper Case</p></button></li>
+                        <li><button onclick="ToLowerCase()" class="register-button"><p class="register-button-t">T</p><p>Lower Case</p></button></li>
+                        <li><button onclick="toCapitalizeFirstLetterOfSentence()" class="register-button"><p class="register-button-t">T</p><p>Sentence Case</p></button></li>
+                        <li><button onclick="toCapitalizeFirstLetter()" class="register-button"><p class="register-button-t">T</p><p>Capitalized Case</p></button></li>
+                        <li><button onclick="ToUpperLowerCase()" class="register-button"><p class="register-button-t">T</p><p>Alternating Case</p></button></li>
+                    </ul>
+                </div>
+                <textarea class="flexbox-textarea-input" placeholder="Get your result here" name="" id="outputText" cols="30" rows="10" readonly></textarea>
+                <button onclick="copyOutput()" class="clear-button"><img src="./media/Copy.svg" alt=""></button>
+            </div>
+        </div>
+    </div>
+    <div class="description-container">
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+        <div class="description-item"><div class="description-header"><h4>Sentence Case</h4><span class="example-1">Example:</span><span class="example-2">This is an example of sentence case.</span></div><p class="description-content">It works by capitalizing the very first letter in each sentence, and will then go on to transform the rest of the text into lowercase as well as converting i’s into I’s. Every letter after a full stop will get converted into an upper case letter.</p></div>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script>
+
+const buttons = document.querySelectorAll('.list-button');
+
+    // Додавання обробників подій для кожної кнопки
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Зняття фокусу з усіх кнопок
+            buttons.forEach(b => b.classList.remove('focused'));
+    
+            // Додавання фокусу до обраної кнопки
+            button.classList.add('focused');
+        });
+    });
+    
+    // Додайте обробник подій для клацання на будь-якій частині сторінки
+    document.addEventListener('click', (event) => {
+        // Зняття фокусу з усіх кнопок при кліці на іншій частині сторінки
+        if (!event.target.forEach('.list-button')) {
+            buttons.forEach(b => b.classList.remove('focused'));
+        }
+    });
+    const regbuttons = document.querySelectorAll('.register-button');
+
+    // Додавання обробників подій для кожної кнопки
+    regbuttons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Зняття фокусу з усіх кнопок
+            regbuttons.forEach(b => b.classList.remove('focused'));
+    
+            // Додавання фокусу до обраної кнопки
+            button.classList.add('focused');
+        });
+    });
+    
+    // Додайте обробник подій для клацання на будь-якій частині сторінки
+    document.addEventListener('click', (event) => {
+        // Зняття фокусу з усіх кнопок при кліці на іншій частині сторінки
+        if (!event.target.forEach('.register-button')) {
+            regbuttons.forEach(b => b.classList.remove('focused'));
+        }
+    });
+    
+    </script>
+</html>

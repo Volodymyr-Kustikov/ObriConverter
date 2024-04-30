@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+
+body{
+    background-color: rgb(223,249,250);
+    font-family: 'Poppins', sans-serif;
+}
+
+.converter-container{
+    width: 80%;
+    margin: auto;
+}
+
+.container-flex-box{
+display: flex;
+}
+.container-flex-box>div{
+    box-shadow: 0 15px 30px rgba(76, 164, 171, 0.2), 0 5px 15px rgba(76, 164, 171, 0.1);
+}
+
+.flexbox-list{
+    width: 26%;
+    padding:24px ;
+    margin: 10px;
+    border-radius: 16px;
+    background-color: white;
+}
+
+.flexbox-list h3{
+    margin-top: 0;
+}
+
+.flexbox-list ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+  
+
+
+.list-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+
+.list-button>div{
+    display: flex;
+    align-items: center;
+}
+
+.list-button>div p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.star{
+    padding: 2px;
+    background-color: rgb(148,235,239);
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+.flexbox-textarea{
+    width: 66%;
+    background-color: white;
+    border-radius: 16px;
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column  ;
+}
+
+
+
+.flexbox-textarea-header{
+    background-color: rgb(148,235,239);
+    height: 15%;
+    display: flex;
+    padding: 0 20px;
+    border-radius: 16PX 16PX 0 0 ;
+}
+
+.flexbox-textarea-header h3 {
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #000000;
+    border-radius: 50%;
+    display: inline-block;
+    border: 5px solid white;
+    margin-block-start: auto;
+    margin-block-end:auto;
+    margin-right: 15px;
+  }
+
+  .flexbox-textarea-input{
+   height: 100%;
+   margin: 4% 4.5%;
+   resize: none;
+   border: none;
+   outline: none;
+   border-radius: 6px;
+   background-color: rgb(223,249,250);
+   padding: 3%;
+}
+
+.clear-button{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 70px;
+    right: 70px;
+    border: 0;
+    background-color: white;
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.clear-button:active{
+    filter: invert(70%) sepia(4%) saturate(4667%) hue-rotate(143deg) brightness(108%) contrast(74%);
+}
+
+.counter-list{
+    padding:24px ;
+    margin: 10px;
+    border-radius: 16px;
+    background-color: white;
+    width: 26%;
+}
+
+.counter-list ul{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.counter-list h3{
+    margin: 0 auto;
+}
+.counter-list>p{
+    margin-block-start: 0.5em;
+    color: rgb(113,128,150);
+}
+
+.counter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 10px;
+    font-size: 13px;
+}
+
+.counter span{
+    min-width: 25px;
+}
+
+.counter:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.093);
+    border-radius: 12px 0 0 12px;
+}
+
+.register-list ul{
+    list-style: none;
+    display: flex;
+    width: 98%;
+    padding: 1%;
+    margin: 0;
+    gap: 1%;
+    background-color: rgb(242,245,245);
+    border-radius: 0 0 30px 30px;
+}
+
+.register-list ul li{
+    width: 19.5%;
+    
+}
+
+.register-button{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+    border: 0;
+    background:0;
+    cursor: pointer;
+}
+.register-button p{
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #718096;
+}
+
+.register-button-t{
+    min-width: 17px;
+    height: 17px;
+    font-weight: 800;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: solid #718096 2px;
+    color: #718096;
+    border-radius: 50%;
+}
+
+.register-button.focused{
+    background-color: white;
+}
+
+.register-button.focused .register-button-t{
+background-color: #446F78;
+color: white;
+}
+
+.list-button.focused {
+    background-color: rgb(223,249,250);
+    border-radius: 20px;
+}
+
+.description-container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 2.5%;
+    margin-top: 50px;
+}
+
+.description-item{
+    background-color: rgb(255, 255, 255);
+    padding: 15px 24px 28px 0;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(76, 164, 171, 0.2), 0 5px 15px rgba(76, 164, 171, 0.1);
+}
+
+.description-header{
+    padding: 0 0 6px 20px;
+    border-left: solid rgb(70,72,88) 4px;
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+}
+
+
+.description-content{
+margin: 10px 0 0 24px;
+}
+
+
+.example-1, .example-2{
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+   display: inline-block;
+}
+
+.example-1{
+    margin: 0 6px 5px 0;
+    background-color: rgb(148,235,239);
+    
+}
+
+.example-2{
+    background-color: rgb(211,243,251);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;  border-radius: 16px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
